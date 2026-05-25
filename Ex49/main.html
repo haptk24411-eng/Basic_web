@@ -1,0 +1,56 @@
+<html>
+    <head>
+         <meta charset='utf-8'>
+         <title>Ex49</title>
+    </head>
+    <body style="background-color: #a8eaf5; padding: 20px;">
+        <form>
+                <h1 style="color:#c90e0e"> Online Classifieds Search Form </h1>
+            <hr/>
+            <div>
+                <p><b>1) Search for a classified in the following sections: </b></p>
+                <table>
+                    <tr>
+                        <td><input type="radio" name="employment" value="employment"> Employment</td>
+                        <td><input type="radio" name="personal" value="personal"> Personal</td>
+                    </tr>
+                     <tr>
+                        <td><input type="radio" name="for_sale" value="for_sale"> For Sale</td>
+                        <td><input type="radio" name="miscellaneous" value="miscellaneous"> Miscellaneous</td>
+                    </tr>
+                     <tr>
+                        <td><input type="radio" name="housing" value="housing"> Housing</td>
+                        <td><input type="radio" name="all" value="all"> All of the above</td>
+                    </tr>
+                </table>
+                <p><b>2) Search the following publications: </b></p>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" name="midwest_times" value="midwest_times"> Midwest times</td>
+                        <td><input type="checkbox" name="modern_news" value="modern_news"> Modern News</td>
+                        <td><input type="checkbox" name="employment_today" value="employment_today"> Employment Today</td>
+                    </tr>
+                     <tr>
+                        <td><input type="checkbox" name="great_lakes_classifieds" value="great_lakes_classifieds"> Great Lakes Classifieds</td>
+                        <td><input type="checkbox" name="middleton_daily" value="middleton_daily"> Middleton Daily</td>
+                        <td><input type="checkbox" name="cashtown_daily_news" value="cashtown_daily_news"> Cashtown Daily News</td>
+                    </tr>   
+                </table>
+                <p><b>3) From to </b><input type="date" name="date_from" value="date_from"> to <input type="date" name="date_to" value="date_to">
+                <p><b>4) Enter a few keywords to describe the classified: </b></p>
+                <input type="text" name="keywords" style="width: 500px;">
+                <p><b>5) Click one of the options below: </b></p>
+                <input type="image" src="images/Search.gif" width="50" height="40">
+                <input type="image" src="images/Cancel.gif" width="50" height="40"
+                onlclick="this.form.reset(); return false;">
+                <input type="image" src="images/Help.gif" width="50" height="40"
+                onclick="alert('Help page!'); return false;"
+                >
+                
+
+            </div>
+        </form>
+
+    </body>
+    </html>
+    
