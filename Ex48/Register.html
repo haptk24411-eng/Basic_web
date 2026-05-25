@@ -1,0 +1,140 @@
+<html>
+    <head>
+         <meta charset='utf-8'>
+         <title>Ex48</title>
+         <style type="text/css">
+            body{
+                background-color: #93d0fe;
+                width: 100%;
+                height: 100vh;
+                margin: 0;
+                padding: 0;
+            }
+            td{
+                padding: 4px 5px;
+            }
+            td:first-child{
+                width: 150px;
+                vertical-align: middle;
+            }
+            
+           
+        </style>
+    </head>
+    <body>
+        <div style="text-align: center; margin-top: 20px;">
+            <img src="images/Jackson.gif" width="300px" height="100px" ">
+        </div>
+        <form>
+            <div>
+                <h1 style="text-align: center;"> Registration Form</h1>
+                <p style="text-align: center;"> Register your Jackson Electronics product here  </p>
+                <table>
+                    <tr>
+                        <td> First name </td>
+                        <td> <input type="text" name="first_name"> </td>
+                        <td> Last name </td>
+                        <td> <input type="text" name="last_name"> </td>
+                    </tr>
+                    <tr>
+                        <td > Adress #1</td>
+                        <td colspan="2"> <input type="text" name="address1" style="width: 100%;"> </td>
+                    </tr>
+                    <tr>
+                        <td> Adress #2</td>
+                        <td colspan="2"> <input type="text" name="address2" style="width: 100%;"> </td>
+                    </tr>
+                    <tr>
+                        <td> City </td>
+                        <td> <input type="text" name="city"> </td>
+                        <td> State </td>
+                        <td> <input type="text" name="state"> </td>
+                        <td> Zip </td>
+                        <td> <input type="text" name="zip"> </td>
+                    </tr>
+                    <tr>
+                        <td> Country </td>
+                        <td> <input type="text" name="country" value="United States" style="width: 100%;"> </td>
+                    </tr>
+                </table>
+            </div>
+            <hr/ style="border: 1px solid rgb(82, 48, 5);">
+            <div>
+                <table>
+                    <tr>
+                        <td style="margin-left: 10px;"> Product:</td>
+                        <td> 
+                            <select name="product">
+                                <option value="">-- Select a product --</option>
+                                <option value="tv">TV</option>
+                                <option value="stereo">Stereo</option>
+                                <option value="dvd">DVD Player</option>
+                                <option value="camera">Camera</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Date purchased:</td>
+                        <td> <input type="date" name="date_purchased"> </td>
+                    </tr>
+                    <tr>
+                        <td> Serial #: </td>
+                        <td> <input type="number" name="serial"> </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"> Used for </td>
+                        <td>
+                            <label for="home"><input type="radio" id="home" name="used_for" value="home"> Home</label>
+                        <td>  
+                            <label for="educational_institutions"><input type="radio" id="educational_institutions" name="used_for" value="educational_institutions"> Educational Institutions</label>
+                        </td> 
+                    <tr> 
+                        <td>
+                            <label for="business"><input type="radio" id="business" name="used_for" value="business"> Business</label>
+                        </td>
+                        <td>
+                            <label for="other"><input type="radio" id="other" name="used_for" value="other"> Other</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="government"><input type="radio" id="government" name="government" value="government"> Government</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"> System (check all that apply): </td>
+                        <td>
+                            <label for="windows"><input type="checkbox" id="windows" name="system" value="windows"> Windows</label>
+                        <td>   
+                            <label for="unix"><input type="checkbox" id="unix" name="system" value="unix"> UNIX</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>    
+                            <label for="mac"><input type="checkbox" id="mac" name="system" value="mac"> Mac</label>
+                        </td>
+                        <td>
+                        <label for="linux"><input type="checkbox" id="linux" name="system" value="linux"> Linux</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <hr/ style="border: 1px solid rgb(82, 48, 5);"/>
+            <div>
+                <table>
+                    <tr>
+                        <td> Comments: </td>
+                        <td>
+                            <input type="text" name="comments" style="width: 600px; height: 100px;"> </td>
+                    </tr>
+                </table>
+            </div class="container">
+            <div style="text-align: center">
+                <input type="submit" value="Click to register">
+                <input type="reset" value="Click to cancel">
+            </div>
+        </form>
+
+    </body>
+    </html>
+    
