@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Message Received</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #9f004f;
+            border-bottom: 2px solid #9f004f;
+            padding-bottom: 10px;
+        }
+        .info-box {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #9f004f;
+        }
+        .label {
+            font-weight: bold;
+            color: #333;
+            display: inline-block;
+            width: 120px;
+        }
+        .value {
+            color: #666;
+            word-break: break-word;
+        }
+        .links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        a {
+            background-color: #9f004f;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            margin: 5px;
+        }
+        a:hover {
+            background-color: #7a003d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Message Received</h2>
+        <p style="color: #666; margin-bottom: 20px;">Thank you for contacting us! Here is a summary of your message:</p>
+        
+        <div class="info-box">
+            <span class="label">Full Name:</span>
+            <span class="value" id="fullName">-</span>
+        </div>
+        
+        <div class="info-box">
+            <span class="label">Email:</span>
+            <span class="value" id="email">-</span>
+        </div>
+        
+        <div class="info-box">
+            <span class="label">Send To:</span>
+            <span class="value" id="sendTo">-</span>
+        </div>
+        
+        <div class="info-box">
+            <span class="label">Title:</span>
+            <span class="value" id="title">-</span>
+        </div>
+        
+        <div class="info-box">
+            <span class="label">Content:</span>
+            <span class="value" id="content" style="display: block; margin-top: 5px; white-space: pre-wrap;">-</span>
+        </div>
+        
+        <div class="links">
+            <a href="contact.html">← Back to Contact Form</a>
+        </div>
+    </div>
+
+    <script>
+        // Parse URL query string parameters
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                fullName: params.get('full_name') || 'Not provided',
+                email: params.get('email') || 'Not provided',
+                sendTo: params.get('send_to') || 'Not provided',
+                title: params.get('title') || 'Not provided',
+                content: params.get('content') || 'Not provided'
+            };
+        }
+
+        // Display the received data
+        function displayData() {
+            const data = getQueryParams();
+            document.getElementById('fullName').textContent = decodeURIComponent(data.fullName);
+            document.getElementById('email').textContent = decodeURIComponent(data.email);
+            document.getElementById('sendTo').textContent = data.sendTo.replace(/_/g, ' ').toUpperCase();
+            document.getElementById('title').textContent = decodeURIComponent(data.title);
+            document.getElementById('content').textContent = decodeURIComponent(data.content);
+        }
+
+        // Display data when page loads
+        window.addEventListener('load', displayData);
+    </script>
+</body>
+</html>
