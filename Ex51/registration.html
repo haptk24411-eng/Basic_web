@@ -1,0 +1,44 @@
+<html>
+    <head>
+         <meta charset='utf-8'>
+         <title>Ex 51</title>
+    </head>
+    <body style="background-color: #10a889; color: #ffffff; margin: 20px;">
+        <form>
+            <div style="text-align: center;">
+                <img src="images/Logo.gif" style="width: 400px; height: auto;">
+            </div>
+            <h1 style="text-align: center;">Newborn Registration</h1>
+            <p>Date: <input type="date" name="date" style="width: 100px;"></p>
+            <p>1) Infant's first name: <input type="text" name="first_name" style="width: 200px;"> Last: <input type="text" name="last_name" style="width: 200px;"></p>
+            <p>2) Medical Record#: <input type="text" name="medical_record" style="width: 150px;"></p>
+            <p>3) Date of Birth: <input type="date" name="dob" style="width: 200px;"></p>
+            <p>4) Birth weight: <input type="number" name="birth_weight" style="width: 100px;" step="0.01"></p>
+            <p>5) APGAR Score: <input type="number" name="apgar_score" style="width: 100px;" step="1" min="0" max="10"></p>
+            <p>6) Mother's first name: <input type="text" name="mother_first_name" style="width: 200px;"> Last: <input type="text" name="mother_last_name" style="width: 200px;"></p>
+            <p>7) Father's first name: <input type="text" name="father_first_name" style="width: 200px;"> Last: <input type="text" name="father_last_name" style="width: 200px;"></p>
+            <table>
+                <tr>
+                    <td rowSpan="4" style="vertical-align: top;">8) Physician (check all that apply)</td>
+                    <td>
+                        <select size="4" style="width: 150px; font-size: 13px;">
+                            <option value="dr_smith">Dr. Smith</option>
+                            <option value="dr_jones">Dr. Jones</option>
+                            <option value="dr_brown">Dr. Brown</option>
+                            <option value="dr_davis">Dr. Davis</option>
+                            <option value="dr_wilson">Dr. Wilson</option>
+                            <option value="dr_miller">Dr. Miller</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <p style="text-align: center; ">
+                <input type="submit" name="Register" value="Register" style="font-size: 15px; ">
+                <input type="reset" name="Cancel" value="Cancel" style="font-size: 15px; ">
+            </p>
+        </form>
+
+
+    </body>
+    </html>
+    
