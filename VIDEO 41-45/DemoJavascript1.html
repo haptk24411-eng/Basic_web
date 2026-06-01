@@ -1,0 +1,36 @@
+<html>
+    <head>
+         <meta charset='utf-8'>
+         <title>Video 42</title>
+         <script type="text/javascript">
+            function xuLyCong(a,b)
+            {
+                ketqua=eval(a)+eval(b)
+                //Hien len hop thong bao//
+                alert(ketqua);
+                // Hien ket qua truc tiep tren trang web//
+                //document.write("Ket qua: " + ketqua);//
+            }
+
+         </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td> He so a: </td>
+                <td><input type="text" id="hsa"></td>
+            </tr>
+            <tr>
+                <td> He so b: </td>
+                <td><input type="text" id="hsb"></td>
+            </tr>
+            <tr>
+                <td colspan="2"> 
+                    <input type="button" value="Cong 2 so" onclick="xuLyCong(hsa.value,hsb.value)">
+                </td>
+            </tr>
+        </table>
+
+    </body>
+    </html>
+    

@@ -1,0 +1,31 @@
+<html>
+    <head>
+         <meta charset='utf-8'>
+         <title>KIEM TRA CHAN LE </title>
+         <script src="..//js/main.js"></script>
+         <script type="text/javascript">    
+            function kiemTraChanLe(a)
+            {
+                kq= isEven(eval(a));
+                if (kq==true) 
+                {
+                alert(a+" la so chan");
+                }
+                else
+                {
+                alert(a+" la so le");       
+                }
+            }
+         </script>
+    </head>
+    <body>
+        <h1> Kiem tra so chan hay le</h1>
+        <p> Nhap so: </p>
+        <input type="number" id="soa">
+        <p></p>
+        <input type="button" value="Kiem tra chan le"
+        onclick="kiemTraChanLe(soa.value)"
+        >
+    </body>
+    </html>
+    
