@@ -1,0 +1,79 @@
+<html>
+    <head>
+         <meta charset='utf-8'>
+         <title>Tiêu đề trang</title>
+         <script>
+            function MAX(){
+                var a=eval(mytable.a.value);
+                var b=eval(mytable.b.value);
+                var c=eval(mytable.c.value);
+                mytable.result.value=Math.max(a,b,c);
+            }
+            function MIN(){
+                var a=eval(mytable.a.value);
+                var b=eval(mytable.b.value);
+                var c=eval(mytable.c.value);
+                mytable.result.value=Math.min(a,b,c);
+            }
+            function sina(){
+                var a=eval(mytable.a.value);
+                mytable.result.value=Math.sin(a);
+            }
+            function cosa(){
+                var a=eval(mytable.a.value);                
+                mytable.result.value=Math.cos(a);
+            }
+            function amub(){
+                var a=eval(mytable.a.value);
+                var b=eval(mytable.b.value);
+                mytable.result.value=Math.pow(a,b);
+            }
+         </script>
+    </head>
+    <body>
+        <form id="mytable">
+            <table border="1" >
+                <colgroup>
+                    <col style="width: 50%; ">
+                    <col style="width: 50%; ">
+                </colgroup>
+                <tr>
+                    <td> a: </td>
+                    <td>
+                        <input type="text" id="a" name="a">
+                    </td>
+                </tr>
+                <tr>
+                    <td> b: </td>
+                    <td>
+                        <input type="text" id="b" name="b">
+                    </td>
+                </tr>
+                <tr>
+                    <td> c: </td>
+                    <td>
+                        <input type="text" id="c" name="c">
+                    </td>
+                </tr>
+                <tr>
+                    <td> Result:</td>
+                    <td>
+                        <input type="text" id="result" name="result" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button type="button" onclick="MAX()">MAX </button>
+                        <button type="button" onclick="MIN()">MIN </button>
+                        <button type="button" onclick="sina()">sin(a) </button>
+                        <button type="button" onclick="cosa()">cos(a) </button>
+                        <button type="button" onclick="amub()">a^b </button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+
+    </body>
+    </html>
+    
