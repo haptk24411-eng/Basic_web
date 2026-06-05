@@ -1,0 +1,88 @@
+<html>
+    <head>
+         <meta charset='utf-8'>
+         <title>Tiêu đề trang</title>
+         <script>
+            function sum(){
+                
+                var total=0;
+                
+                for(var i=1;i<=3;i++){
+                    var quantity=parseFloat(myTable.rows[i].cells[3].children[0].value) || 0;
+                    var price = parseFloat(myTable.rows[i].cells[2].innerHTML);
+                    var itemTotal = quantity * price;
+                    myTable.rows[i].cells[4].children[0].value = itemTotal.toFixed(2) + "$";
+                    total+=quantity*price;
+                }
+                myForm.total.value = total.toFixed(2) + "$";
+            }
+         </script>
+         <style type="text/css">
+            #myTable{
+                width: 100%;
+                text-align: center;
+            }
+         </style>
+    </head>
+    <body>
+        <form id="myForm">
+            <div style="border: 1px solid #000000;">
+                <div>
+                    <table id="myTable">
+                    <colgroup>
+                        <col style="width: 15%;">
+                        <col style="width: 20%;">
+                        <col style="width: 15%;">
+                        <col style="width: 25%;">
+                        <col style="width: 25%;">
+                    </colgroup>
+                    <thead>
+                        <tr style="font-weight: bold;">
+                            <td> Part number</td>
+                            <td> Description</td>
+                            <td> Price</td>
+                            <td> Quantity</td>
+                            <td> Item Table </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> C112</td>
+                            <td> Mouse </td>
+                            <td> 19.95$ </td>
+                            <td> <input type="text"> </td>
+                            <td> <input type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td> B124</td>
+                            <td> Keyboard US </td>
+                            <td> 29.95$ </td>
+                            <td> <input type="text"> </td>
+                            <td> <input type="text"> </td>
+                        </tr>
+                        <tr>
+                            <td> U125</td>
+                            <td> USB KingMax </td>
+                            <td> 39.95$ </td>
+                            <td> <input type="text"> </td>
+                            <td> <input type="text"> </td>
+                        </tr>
+                    </tbody>                
+                </table>
+                </div>
+                <hr/>
+                <div style="text-align: right;margin-top: 20px; margin-right: 20px;">
+                    <p>
+                        Total 
+                            <input type="text" name="total" readonly>
+                    </p>
+                    <p>
+                            <button type="button" onclick="sum()" style="padding: 10px 20px; background-color: #e3a022; color: white; border: 1px solid #fa740e;">Sum</button>
+                    </p>
+                </div>
+            </div>
+       </form>
+
+    </body>
+    </html>
+    
